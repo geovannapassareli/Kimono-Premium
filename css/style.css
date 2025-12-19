@@ -1,0 +1,210 @@
+/*-------------------------------------------CLASSES-----------------------------------------------*/
+body{
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+/*--------------------------------------------TAGS-------------------------------------------------*/
+.navbar-dark .navbar-nav .nav-link {
+    color: white !important;
+    font-family: 'Montserrat';
+}
+
+.logo{
+    display: flex;
+
+    justify-content: center;
+    height: 300px;
+    width: auto;
+}
+
+.nav.justify-content-center{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link{
+    color: black;
+    font-family: 'Montserrat';
+    font-size: 17px;
+}
+
+/*---MENU INSTITUCIONAL---*/
+.Institucional,
+.Institucional .nav-link{
+  position: relative;
+  color: white;
+}
+
+.Institucional .nav-link::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.Institucional .nav-link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 991px) {  /*menu institucional mobile*/
+
+  .navbar-nav .nav-link {
+    display: inline-block; /* IMPORTANTE */
+    position: relative;
+    padding: 10px 0;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .institucional .nav-link::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+  }
+
+  .institucional .nav-link:hover::after {
+    width: 60%; /* controla o tamanho do hover */
+  }
+}
+
+@media (max-width: 991px) { /*menu idioma mobile*/
+
+  /* container do idioma */
+  .menu-idioma {
+    position: relative;
+    width: 100%;          /* 🔥 ocupa a largura do menu */
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  /* dropdown */
+  .menu-idioma .dropdown-menu {
+    max-height: 200px;
+    overflow-y: auto;
+    border: none; /* Deixa o visual mais limpo dentro do menu escuro */
+    background-color: rgba(255,255,255,0.05); /* Um leve destaque no fundo escuro */
+    float: none;
+    width: 100%;          /* 🔥 alinhado com o menu */
+    padding: 5px 0;
+    text-align: center;
+  }
+
+  .menu-idioma .dropdown-item {
+    padding: 6px 0;
+    font-size: 14px;
+  }
+}
+
+/*---MENU CATALOGO---*/
+.Catalogo,
+.Catalogo .nav-link{
+  position: relative;
+  color: black;
+}
+
+.Catalogo .nav-link::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 0;
+  height: 2px;
+  background: #ff6600;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.Catalogo .nav-link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {    /*menu catalogo mobile*/
+  .Catalogo {
+    display: flex !important;
+    flex-wrap: nowrap !important; /* Impede que os itens quebrem linha */
+    overflow-x: auto;            /* Ativa o scroll horizontal */
+    white-space: nowrap;         /* Mantém o texto em uma linha só */
+    -webkit-overflow-scrolling: touch; /* Scroll suave no iOS */
+     padding: 10px 5px;
+    justify-content: flex-start !important; /* Alinha à esquerda para o scroll */
+  }
+
+  .Catalogo .nav-item {
+    flex: 0 0 auto; /* Impede que os itens encolham */
+  }
+
+    /* Esconde a barra de scroll para ficar mais limpo */
+  .Catalogo::-webkit-scrollbar {
+     display: none;
+    }
+}
+
+/*---Fim---*/
+
+/*Slide de fundo*/
+
+.main-bg{
+    position: relative; /*para não fugir do main*/
+    margin-top: 60px ;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.bg-slider{
+    
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/kmn-branco.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.bg-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+
+.destaques{
+ display: flex;
+ align-items: center;
+ text-align: center;
+ margin: 2rem 0;
+ font-family: 'Montserrat';
+ font-weight: 500;
+ color: black; /* Cor da palavra */
+ font-weight: bold;
+ letter-spacing: 2px; /* Deixa a palavra com um estilo mais moderno */
+}
+
+.destaques::after{
+   content: "";
+    flex: 1;
+    height: 2px;
+    /* Gradiente: Laranja para Transparente */
+    background: linear-gradient(to left, transparent, #ff6600);
+    margin-left: 20px;
+}
+
+.destaques::before{
+    content: "";
+    flex: 1;
+    height: 2px;
+    /* Gradiente: Transparente para Laranja */
+    background: linear-gradient(to right, transparent, #ff6600);
+    margin-right: 20px;
+}
+
+
