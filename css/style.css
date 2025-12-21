@@ -5,17 +5,20 @@ body{
     padding: 0;
 }
 /*--------------------------------------------TAGS-------------------------------------------------*/
+
+
 .navbar-dark .navbar-nav .nav-link {
     color: white !important;
     font-family: 'Montserrat';
 }
 
 .logo{
-    display: flex;
+  width: 40px;
+  height: 40px;
+}
 
-    justify-content: center;
-    height: 300px;
-    width: auto;
+.navbar-brand img:hover {
+    transform: scale(1.05); /* Pequeno efeito de zoom no logo ao passar o mouse */
 }
 
 .nav.justify-content-center{
@@ -29,9 +32,25 @@ body{
     font-size: 17px;
 }
 
+.logo{
+  margin-right: 80px;
+  width: auto;
+  height: 150px; 
+}
+
+@media (max-width: 786px) {
+  .logo {
+    height: 90px;
+    width: auto;
+  }
+}
+
 /*---MENU INSTITUCIONAL---*/
 .Institucional,
 .Institucional .nav-link{
+  width: 100%;
+  
+  margin-bottom: 40px;
   position: relative;
   color: white;
 }
@@ -52,7 +71,7 @@ body{
   width: 100%;
 }
 
-@media (max-width: 991px) {  /*menu institucional mobile*/
+@media (max-width: 786px) {  /*menu institucional mobile*/
 
   .navbar-nav .nav-link {
     display: inline-block; /* IMPORTANTE */
@@ -75,25 +94,31 @@ body{
   }
 }
 
-@media (max-width: 991px) { /*menu idioma mobile*/
+.menu-idioma .dropdown-menu{
+margin: 0;                 /* remove espaçamento externo */
+padding: 0;
+
+}
+
+
+@media (max-width: 786px) { /*menu idioma mobile*/
 
   /* container do idioma */
   .menu-idioma {
-    position: relative;
-    width: 100%;          /* 🔥 ocupa a largura do menu */
-    text-align: center;
-    margin-top: 8px;
-  }
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
 
   /* dropdown */
   .menu-idioma .dropdown-menu {
+    position: static;        /* impede cortar a tela */
     max-height: 200px;
     overflow-y: auto;
     border: none; /* Deixa o visual mais limpo dentro do menu escuro */
-    background-color: rgba(255,255,255,0.05); /* Um leve destaque no fundo escuro */
+    background-color: rgba(255,255,255,0.05); /*  destaque no fundo escuro */
     float: none;
-    width: 100%;          /* 🔥 alinhado com o menu */
-    padding: 5px 0;
+    width: 100%;          /* alinhado com o menu */
     text-align: center;
   }
 
@@ -162,7 +187,7 @@ body{
     
   position: absolute;
   inset: 0;
-  background-image: url("../img/kmn-branco.png");
+  background-image: url("../img/fundo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -207,4 +232,95 @@ body{
     margin-right: 20px;
 }
 
+
+/*MEIO*/
+
+.hero {
+  display: flex;
+  color: white;
+  margin: 0;
+  margin-top: 40px;
+  position: relative;  /* permite overlay absoluto */
+  height: 520px;     /* controla o tamanho do hero */
+  background-image: url("../img/hero.png");
+  background-size: cover;  /* cobre toda a área */
+  background-position: right center;  /* foco nos kimonos */
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0; 
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.3)
+  );
+  z-index: 0;
+}
+
+.hero-content{
+  z-index: 1;
+  margin-top: 60px;
+  margin-left: 80px;
+}
+
+.hero-content h1{
+ 
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.hero-content p{
+  font-weight: 600;
+  font-size: 28px;
+  
+}
+
+.btn-hero{
+  background-color: #ff6600;
+  color: white;
+  font-size: 18px;
+  padding: 8px 30px;
+}
+
+/*SEÇÃO DESTAQUES*/
+
+.card-img-top{
+  display: block;
+  width: auto;
+  height: 230px;
+}
+
+.card-title{
+  font-weight: 600;
+}
+
+.cart-icon{
+color: #ff6600;
+font-size: 25px;
+display: inline-block; /* necessário pro transform */
+transition: transform 0.25s ease;
+  
+}
+
+.cart-icon:hover{
+  color: #ff6600;
+  transform: scale(1.15) translateY(-2px);
+}
+
+.card-text{
+  font-weight: 600;
+}
+
+.desconto {
+  font-weight: 700;
+  background-color: #ff6600;
+  position: absolute;
+  width: 55px;
+  height: 20px;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
 

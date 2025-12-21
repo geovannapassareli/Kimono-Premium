@@ -14,61 +14,59 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <header>
-     <div class="Institucional"> 
-        <nav class=" navbar nav justify-content-center navbar-expand-lg navbar-dark bg-dark "> <!-- expande o menu em uma linha e centraliza horizontalmente-->     
-         
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" 
-          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">   <!--Menu hamburguer para mobile-->
-            <span class="navbar-toggler-icon"></span>
-          </button>
+    <header class="header-top">
 
-        <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
-             <ul class="navbar-nav">   
-                <li class="nav-item"> 
-                    <a class="nav-link" href="#"> 
-                      <i class="bi bi-box-seam"></i>  Meus pedidos 
-                    </a> 
-                </li>
-                    
-                <li class="nav-item"> 
-                    <a class="nav-link" href="#"> 
-                      <i class="bi bi-person"></i>  Login/Cadastro
-                    </a> 
-                </li>
+        <div class="Institucional">
+            <nav class=" navbar navbar-expand-lg navbar-dark bg-dark py-2"> <!-- expande o menu em uma linha e centraliza horizontalmente--> 
+                <div class="container-fluid">
+                     <a class="navbar-brand" href="#">
+                        <img src="img/logo.png" alt="KimonoPremium" class="logo"> </a>   
 
-                <li class="nav-item"> 
-                    <a class="nav-link" href="#">
-                       <i class="bi bi-envelope"></i>  Contato 
-                    </a> 
-                </li>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" 
+                        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">   <!--Menu hamburguer para mobile-->
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                <li class="nav-item"> 
-                    <a class="nav-link" href="#"> 
-                      <i class="bi bi-globe2"></i> Sobre 
-                    </a> 
-                </li>
-            </ul>
-        </div>
-           
-        
-               <div class=" menu-idioma btn-group dropdown">  <!-- botão menu para esquerda link (Idioma)-->
-                    <button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                     Idioma
-                    </button>
-                <div class="dropdown-menu">
-                     <a class="dropdown-item" href="#"> 🇧🇷 Portugês PT/BR</a>
-                     <a class="dropdown-item" href="#"> 🇺🇸 Inglês EUA</a>
-                     <a class="dropdown-item" href="#"> 🇫🇷 Francês</a>
-                </div>
+                        <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+                            <ul class="navbar-nav ml-auto" class="menu-Institucional">   
+                                <li class="nav-item"> 
+                                    <a class="nav-link" href="#"> 
+                                     <i class="bi bi-box-seam"></i>  Meus pedidos 
+                                    </a> 
+                                </li>
+                                        
+                                 <li class="nav-item"> 
+                                    <a class="nav-link" href="#"> 
+                                    <i class="bi bi-person"></i>  Login/Cadastro
+                                    </a> 
+                                 </li>
+
+                                 <li class="nav-item"> 
+                                    <a class="nav-link" href="#">
+                                    <i class="bi bi-envelope"></i>  Contato 
+                                    </a> 
+                                 </li>
+
+                                <li class="nav-item"> 
+                                    <a class="nav-link" href="#"> 
+                                    <i class="bi bi-globe2"></i> Sobre 
+                                    </a> 
+                                </li>
+
+                                 <div class=" menu-idioma dropdown ">  <!-- botão menu para esquerda link (Idioma)-->
+                                    <button class="btn btn-secondary btn-sm dropdown-toggle " role="button" data-toggle="dropdown" aria-expanded="false"> idioma </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#"> 🇧🇷 Portugês PT/BR</a>
+                                            <a class="dropdown-item" href="#"> 🇺🇸 Inglês EUA</a>
+                                            <a class="dropdown-item" href="#"> 🇫🇷 Francês</a>
+                                        </div>
+                                 </div>
+                             </ul>
+                         </div>
+                     </div>
+                </nav>
             </div>
-        </nav>
-    </div>  
-               
-    <div class="logo">
-        <img src="img/logo.png" alt="KimonoPremium">
-    </div>
-            
+                                
             <div class="Catalogo">
                 <ul class=" Catalogo nav justify-content-center navbar-expand-lg ">
                     <li class="nav-item">
@@ -92,16 +90,95 @@
                     </form>
                 </ul>
             </div>
-
-            <section class="destaques">
-                <h2>  Destaques </h2>
-            </section>
     </header>
 
-    <main class="main-bg">
-        <div class="bg-slider"></div>
-        <div class="bg-overlay"></div>
+    <main class="slider"> <!--Bloco de Destaque-->
+       
+        <section class="hero">
+            <div class="hero-overlay"></div>
 
+            <div class="container hero-content" class="hero-text">
+                <h1>DESAFIE SEU MELHOR JIU-JITSU</h1>
+                <p>Experimente nossa coleção competidor</p>
+                <a href="#" class="btn btn-hero">VEJA A COLEÇÃO</a>
+            </div>
+        </section>
+
+         <section class="destaques">
+                <h2>  Destaques </h2>
+         </section>
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                <div class="col mb-4"> <!--Para manter itens um embaixo do outro no celular,-->
+                    <div class="card h-100">
+                        <img src="img/kimono-black.jpeg" class="card-img-top img-fluid"> <!--mantem a imagem responsiva e adequada ao card-->
+                        <div class="card-body">
+                            <h5 class="card-title">Kimono Preto</h5>
+                            <p class="card-text">R$ 380,00</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Em até 6x de R$ 63,33 sem juros</small>
+                                <a href="#" class="cart-icon"><i class="bi bi-bag-plus"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+
+                    <div class="col mb-4"> 
+                    <div class="card h-100">
+                        <img src="img/kimono-black.jpeg" class="card-img-top img-fluid"> 
+                        <div class="card-body">
+                            <h5 class="card-title">Kimono Preto</h5>
+                            <p class="card-text">R$ 380,00</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Em até 6x de R$ 63,33 sem juros</small>
+                                <a href="#" class="cart-icon"><i class="bi bi-bag-plus"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+
+                    <div class="col mb-4"> 
+                    <div class="card h-100">
+                        <span class="badge badge-dark desconto">-10%</span>
+                        <img src="img/compet-branco.png" class="card-img-top img-fluid"> 
+                        <div class="card-body">
+                            <h5 class="card-title">Kimono Competidor Branco</h5>
+                            <p class="card-text">
+                                <span class="ml-2 font-weight-bold">R$ 440,10</span> 
+                                <del class="text-muted">R$ 489,00</del> <!--Efeito de "Desconto" no numero-->
+                            </p>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Em até 6x de R$ 73,35 sem juros</small>
+                                <a href="#" class="cart-icon"><i class="bi bi-bag-plus"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+
+                   <div class="col mb-4"> 
+                    <div class="card h-100">
+                        <span class="badge badge-dark desconto">-20%</span>
+                        <img src="img/kid.png" class="card-img-top img-fluid"> 
+                        <div class="card-body">
+                            <h5 class="card-title">Kimono Banco Infantil </h5>
+                            <p class="card-text">
+                                <span class="ml-2 font-weight-bold">R$ 191,20</span> 
+                                <del class="text-muted">R$ 239,00</del> 
+                            </p>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Em até 6x de R$ 31,86 sem juros</small>
+                                <a href="#" class="cart-icon"><i class="bi bi-bag-plus"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                </div>
+            </div> 
+        </div>
 
     </main>
     
