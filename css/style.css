@@ -237,15 +237,13 @@ padding: 0;
 
 .hero {
   display: flex;
-  color: white;
-  margin: 0;
-  margin-top: 40px;
-  position: relative;  /* permite overlay absoluto */
-  height: 520px;     /* controla o tamanho do hero */
+  align-items: center;
+  min-height: 400px; /* Use min-height em vez de height */
   background-image: url("../img/hero.png");
-  background-size: cover;  /* cobre toda a área */
-  background-position: right center;  /* foco nos kimonos */
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; /* Centralizar ajuda no mobile */
+  position: relative;
+  color: white;
 }
 
 .hero::before {
@@ -261,8 +259,9 @@ padding: 0;
 
 .hero-content{
   z-index: 1;
-  margin-top: 60px;
-  margin-left: 80px;
+  padding: 20px; /* Em vez de margin-left fixa, use padding */
+  text-align: center; /* Centralizado por padrão (mobile) */
+  width: 100%;
 }
 
 .hero-content h1{
@@ -284,12 +283,24 @@ padding: 0;
   padding: 8px 30px;
 }
 
+@media (min-width: 992px) {
+  .hero { height: 520px; background-position: right center; }
+  .hero-content { text-align: left; margin-left: 80px; width: auto; }
+}
+
+@media (max-width: 767px) {
+  .hero-content h1 { font-size: 1.5rem !important; }
+  .hero-content p  { font-size: 18px !important; }
+  .btn-hero        { font-size: 13px !important; }
+}
+
 /*SEÇÃO DESTAQUES*/
 
 .card-img-top{
+  width: 100%;       /* OBRIGATÓRIO: a imagem ocupa a largura do card */
+  height: 230px;     /* Mantém o alinhamento visual */
+  object-fit: cover; /* Recorta a imagem para caber no espaço sem distorcer */
   display: block;
-  width: auto;
-  height: 230px;
 }
 
 .card-title{
@@ -327,7 +338,6 @@ transition: transform 0.25s ease;
 .itens{
   font-size: 19px;
 }
-
 /*RODAPE*/
 
 footer{
